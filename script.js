@@ -23,8 +23,14 @@ const driverAppearance = document.querySelector(".driver-appearance");
 const driverNumber = document.querySelector(".driver-number");
 const driverPhoto = document.querySelector(".driver-photo");
 
+// Change points button
+const button = document.querySelector(".button");
+const pointAdded = document.querySelector(".form__field");
+const selectedTeam = document.querySelector(".select-team")
+
 
 const sortedMockData = mockData.sort((a,b) => (a.points < b.points) ? 1 : ((b.points < a.points) ? -1 : 0));
+console.log(sortedMockData);
 
 const createDrivers = sortedMockData.forEach((driver, index) => {
     const {firstName, lastName, number, team, points, image, country, hex} = driver;
@@ -65,9 +71,11 @@ cards.appendChild(newDriver);
 }   
 );
 
+let pointsToAdd;
+let teamToAddPoints;
 
-
-
-
-
-
+button.addEventListener("click", function() {
+  pointsToAdd = Number(pointAdded.value);
+  teamToAddPoints = selectedTeam.value;
+  if (teamToAddPoints !== 'Select team:') {} else {alert("Please select a team!")}
+})
