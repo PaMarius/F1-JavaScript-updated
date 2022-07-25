@@ -11,12 +11,24 @@
   <body>
     <div class="cards"></div>
     <div class="change-score">
-      <!-- <input type="text" class="input-text" placeholder="Type how much points you want to add"> -->
-      <div class="form__group field">
-        <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
-        <label for="name" class="form__label">Name</label>
+      <select class="select-team">
+        <option value="Select team:">Select team:</option>
+        <option value="Red Bull Racing">Red Bull Racing</option>
+        <option value="Ferrari">Ferrari</option>
+        <option value="Mercedes">Mercedes</option>
+        <option value="McLaren">McLaren</option>
+        <option value="Alpine">Alpine</option>
+        <option value="Alfa Romeo">Alfa Romeo</option>
+        <option value="Haas F1 Team">Haas F1 Team</option>
+        <option value="AlphaTauri">AlphaTauri</option>
+        <option value="Aston Martin">Aston Martin</option>
+        <option value="Williams">Williams</option>
+      </select>
+      <div class="form__group">
+        <input type="number" class="form__field" placeholder="Name" name="name" id='name' required />
+        <label for="name" class="form__label">Points</label>
       </div>
-      <button class="button"></button>
+      <button class="button">Add Points</button>
     </div>
 
     <script type="module" src="script.js"></script>
