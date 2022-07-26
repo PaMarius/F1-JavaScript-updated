@@ -79,3 +79,8 @@ button.addEventListener("click", function() {
   teamToAddPoints = selectedTeam.value;
   if (teamToAddPoints !== 'Select team:') {} else {alert("Please select a team!")}
 })
+
+
+
+
+
