@@ -1,226 +1,226 @@
 @font-face {
-    font-family: F1Bold;
-    src: url("Formula1-Bold_web_0.ttf");
-  }
-  @font-face {
-    font-family: F1Regular;
-    src: url("Formula1-Regular_web_0.ttf");
-  }
-  @font-face {
-    font-family: F1Wide;
-    src: url("Formula1-Wide_web_0.ttf");
-  }
-  
-  @media only screen and (max-width: 896px) {
-    .cards {
-      flex-wrap: wrap;
-      flex-direction: column;
-      align-items: center;
-    }
-    .cards > .driver-card {
-      width: 700px;
-    }
-  }
-  
-  @media only screen and (max-width: 770px) {
-    .cards {
-      flex-wrap: wrap;
-      flex-direction: column;
-      align-items: center;
-    }
-    .cards > .driver-card {
-      width: 95%;
-    }
-  }
-  
-  .cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .driver-card {
-    width: 400px;
-    border-top: 2px black solid;
-    border-right: 2px black solid;
-    border-top-right-radius: 15px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-top: 10px;
-    backface-visibility: hidden;
-    transition: transform 0.8s;
-    transition-delay: 0s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-  }
-  
-  .flip-card-back {
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    background-color: white;
-    color: white;
-    transform: rotateY(180deg);
-    border-top: 2px gray solid;
-    border-left: 2px gray solid;
-    border-top-left-radius: 15px;
-  }
-  
-  .info-card {
-    text-align: center;
-    color: black;
-  }
-  
-  /* Every from card */
-  .driver-stats {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px black solid;
-    margin-bottom: 10px;
-  }
-  
-  .driver-info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    box-sizing: content-box;
-    height: 10%;
-    padding-bottom: 10px;
-    border-bottom: 1px black solid;
-    margin-bottom: 10px;
-  }
-  .driver-team {
-    font-family: F1Regular;
-    color: gray;
-    font-size: 12px;
-    letter-spacing: 0.7px;
-    padding-top: 15px;
-    margin-bottom: 20px;
-  }
-  .driver-appearance {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    background-image: url("plus-x1.png");
-  }
-  
-  /* Every props from card */
-  .rank {
-    font-family: F1Bold;
-    font-size: 2.652rem;
-  }
-  .driver-points {
-    font-family: F1Wide;
-    font-size: 18px;
-    line-height: 15px;
-    letter-spacing: 0.5px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-  .points {
-    padding: 2px;
-    margin-top: 5px;
-    font-size: 12px;
-    width: 75px;
-    border-radius: 15px;
-  }
-  .driver-name {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 17px;
-    padding-left: 15px;
-    border-left: 5px solid #3671c6;
-    animation-duration: 0.1s;
-  }
-  .first-name {
-    font-family: F1Regular;
-    font-size: 12px;
-    letter-spacing: 0.7px;
-  }
-  .last-name {
-    font-family: F1Bold;
-    font-size: 18px;
-  }
-  
-  .driver-country {
-    width: 48px;
-    height: 32px;
-    border: 1px gray solid;
-    border-radius: 5px;
-    animation-duration: 0.1s;
-  }
-  
-  .driver-image,
-  .country-image {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-  .driver-number {
-    font-family: F1Bold;
-    text-align: center;
-    width: 15%;
-    background-color: white;
-    font-size: 35px;
-  }
-  .number-1 {
-    color: red;
-  }
-  .driver-photo {
-    width: 50%;
-  }
+  font-family: F1Bold;
+  src: url("Formula1-Bold_web_0.ttf");
+}
+@font-face {
+  font-family: F1Regular;
+  src: url("Formula1-Regular_web_0.ttf");
+}
+@font-face {
+  font-family: F1Wide;
+  src: url("Formula1-Wide_web_0.ttf");
+}
 
-  .mercedes {
-    font-size: 30px;
+@media only screen and (max-width: 896px) {
+  .cards {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  /* Common props */
-  .backg-blk {
-    background-color: black;
-    color: white;
+  .cards > .driver-card {
+    width: 700px;
   }
-  
-  /* TRANSITIONS */
-  
-  @keyframes bounce {
-    40% {
-      transform: translateY(-2px);
-    }
+}
+
+@media only screen and (max-width: 770px) {
+  .cards {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  /* BORDER CARD EFFECT */
-  
-  .driver-card:hover {
-    padding-top: 5px;
-    margin-top: 5px;
+  .cards > .driver-card {
+    width: 95%;
   }
-  
-  /* BOUNCE driver NAME EFFECT */
-  
-  .driver-card:hover > .driver-info > .driver-country {
-    animation-name: bounce;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.driver-card {
+  width: 400px;
+  border-top: 2px black solid;
+  border-right: 2px black solid;
+  border-top-right-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 10px;
+  backface-visibility: hidden;
+  transition: transform 0.8s;
+  transition-delay: 0s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.flip-card-back {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: white;
+  color: white;
+  transform: rotateY(180deg);
+  border-top: 2px gray solid;
+  border-left: 2px gray solid;
+  border-top-left-radius: 15px;
+}
+
+.info-card {
+  text-align: center;
+  color: black;
+}
+
+/* Every from card */
+.driver-stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px black solid;
+  margin-bottom: 10px;
+}
+
+.driver-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: content-box;
+  height: 10%;
+  padding-bottom: 10px;
+  border-bottom: 1px black solid;
+  margin-bottom: 10px;
+}
+.driver-team {
+  font-family: F1Regular;
+  color: gray;
+  font-size: 12px;
+  letter-spacing: 0.7px;
+  padding-top: 15px;
+  margin-bottom: 20px;
+}
+.driver-appearance {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-image: url("plus-x1.png");
+}
+
+/* Every props from card */
+.rank {
+  font-family: F1Bold;
+  font-size: 2.652rem;
+}
+.driver-points {
+  font-family: F1Wide;
+  font-size: 18px;
+  line-height: 15px;
+  letter-spacing: 0.5px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.points {
+  padding: 2px;
+  margin-top: 5px;
+  font-size: 12px;
+  width: 75px;
+  border-radius: 15px;
+}
+.driver-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 17px;
+  padding-left: 15px;
+  border-left: 5px solid #3671c6;
+  animation-duration: 0.1s;
+}
+.first-name {
+  font-family: F1Regular;
+  font-size: 12px;
+  letter-spacing: 0.7px;
+}
+.last-name {
+  font-family: F1Bold;
+  font-size: 18px;
+}
+
+.driver-country {
+  width: 48px;
+  height: 32px;
+  border: 1px gray solid;
+  border-radius: 5px;
+  animation-duration: 0.1s;
+}
+
+.driver-image,
+.country-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.driver-number {
+  font-family: F1Bold;
+  text-align: center;
+  width: 15%;
+  background-color: white;
+  font-size: 35px;
+}
+.number-1 {
+  color: red;
+}
+.driver-photo {
+  width: 50%;
+}
+
+.mercedes {
+  font-size: 30px;
+}
+
+/* Common props */
+.backg-blk {
+  background-color: black;
+  color: white;
+}
+
+/* TRANSITIONS */
+
+@keyframes bounce {
+  40% {
+    transform: translateY(-2px);
   }
-  
-  /* BOUNGE FLAG EFFECT */
-  
-  .driver-card:hover > .driver-info > .driver-name {
-    animation-name: bounce;
-  }
-  
-  /* FLIP CARD EFFECT */
-  
-  .driver-card:hover {
-    transform: rotateY(180deg);
-    transition-delay: 1s;
-  }
+}
+
+/* BORDER CARD EFFECT */
+
+.driver-card:hover {
+  padding-top: 5px;
+  margin-top: 5px;
+}
+
+/* BOUNCE driver NAME EFFECT */
+
+.driver-card:hover > .driver-info > .driver-country {
+  animation-name: bounce;
+}
+
+/* BOUNGE FLAG EFFECT */
+
+.driver-card:hover > .driver-info > .driver-name {
+  animation-name: bounce;
+}
+
+/* FLIP CARD EFFECT */
+
+.driver-card:hover {
+  transform: rotateY(180deg);
+  transition-delay: 1s;
+}
 
 /* CHANGE SCORE BUTTON */
 
@@ -237,33 +237,31 @@
   height: 50px;
   width: 100px;
   text-align: center;
-  
 }
 
 .button {
-	box-shadow: 3px 4px 0px 0px #db3323;
-	background:linear-gradient(to bottom, #fae3e1 5%, #e6ccca 100%);
-	background-color:#fae3e1;
-	border-radius:18px;
-	border:1px solid #d44439;
-	display:inline-block;
-	cursor:pointer;
-	color:#a884a8;
-	font-family:Arial;
-	font-size:17px;
-	padding:7px 25px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #9e6b67;
+  box-shadow: 3px 4px 0px 0px #db3323;
+  background: linear-gradient(to bottom, #fae3e1 5%, #e6ccca 100%);
+  background-color: #fae3e1;
+  border-radius: 18px;
+  border: 1px solid #d44439;
+  display: inline-block;
+  cursor: pointer;
+  color: #a884a8;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 7px 25px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #9e6b67;
 }
 .button:hover {
-	background:linear-gradient(to bottom, #e6ccca 5%, #fae3e1 100%);
-	background-color:#e6ccca;
+  background: linear-gradient(to bottom, #e6ccca 5%, #fae3e1 100%);
+  background-color: #e6ccca;
 }
 .button:active {
-	position:relative;
-	top:1px;
+  position: relative;
+  top: 1px;
 }
-
 
 /* INput text */
 $primary: #11998e;
@@ -284,7 +282,7 @@ $gray: #9b9b9b;
   border-bottom: 2px solid $gray;
   outline: 0;
   font-size: 1.3rem;
-  color: $white;
+  color: gray;
   padding: 7px 0;
   background: transparent;
   transition: border-color 0.2s;
@@ -317,16 +315,19 @@ $gray: #9b9b9b;
     transition: 0.2s;
     font-size: 1rem;
     color: $primary;
-    font-weight:700;    
+    font-weight: 700;
   }
-  padding-bottom: 6px;  
+  padding-bottom: 6px;
   font-weight: 700;
   border-width: 3px;
-  border-image: linear-gradient(to right, $primary,$secondary);
+  border-image: linear-gradient(to right, $primary, $secondary);
   border-image-slice: 1;
 }
 /* reset input */
-.form__field{
-  &:required,&:invalid { box-shadow:none; }
+.form__field {
+  &:required,
+  &:invalid {
+    box-shadow: none;
+  }
 }
 /* demo */
